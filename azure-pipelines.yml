@@ -8,6 +8,13 @@ trigger:
 
 pool:
   vmImage: 'ubuntu-latest'
+  strategy:
+    matrix:
+      jdk10:
+        jdk_version: "1.1"
+      jdk11:
+        jdk_version: "1.2"
+      maxParallel: 2
 
 steps:
 - task: NodeTool@0
